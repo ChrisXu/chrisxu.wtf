@@ -1,21 +1,66 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import get from 'lodash/get';
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+class BlogIndexPage extends React.Component {
+  render () {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
+    const posts = get(this, 'props.data.allMarkdownRemark.edges');
 
-export default IndexPage
+    return (
+      <Layout>
+        <SEO title={siteTitle} keywords={[`ios`, `mobile`, `engineering`]} />
+        <main>
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug;
+            return (
+              <article key={node.fields.slug}>
+                <div>
+                  <h3>
+                    <Link style={{ textDecoration: 'none', color: '#1976D2' }} to={node.fields.slug} rel="bookmark">
+                      {title}
+                    </Link>
+                  </h3>
+                  <small style={{ fontWeight: '400', color: '#757575' }}>
+                    {node.frontmatter.date}
+                  </small>
+                </div>
+                <p
+                  dangerouslySetInnerHTML={{ __html: node.frontmatter.brief }}
+                />
+              </article>
+            );
+          })}
+        </main>
+    </Layout>
+    );
+  }
+}
+
+export default BlogIndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            brief
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;
