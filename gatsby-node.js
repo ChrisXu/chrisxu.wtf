@@ -1,13 +1,13 @@
-const _ = require('lodash');
-const path = require('path');
-const Promise = require('bluebird');
-const { createFilePath } = require('gatsby-source-filesystem');
+const _ = require('lodash')
+const path = require('path')
+const Promise = require('bluebird')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
+  const { createPage, createRedirect } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/post.js');
+    const blogPost = path.resolve('./src/templates/post.js')
 
     resolve(
       graphql(
@@ -32,20 +32,20 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-          return;
+          console.log(result.errors)
+          reject(result.errors)
+          return
         }
 
-        const posts = result.data.allMarkdownRemark.edges;
+        const posts = result.data.allMarkdownRemark.edges
         const allSlugs = _.reduce(
           posts,
           (result, post) => {
-            result.add(post.node.fields.slug);
-            return result;
+            result.add(post.node.fields.slug)
+            return result
           },
           new Set()
-        );
+        )
 
         posts.forEach(({ node }) => {
           createPage({
@@ -54,15 +54,15 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug: node.fields.slug,
             },
-          });
-        });
+          })
+        })
       })
     )
-  });
+  })
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
+  const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })

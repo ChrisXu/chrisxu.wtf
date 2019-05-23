@@ -6,8 +6,8 @@ module.exports = {
     siteUrl: 'https://chrisxu.wtf',
     social: {
       twitter: '@_chrisxu',
-      github: '@chrisxu'
-    }
+      github: '@chrisxu',
+    },
   },
   pathPrefix: '/',
   plugins: [
@@ -33,21 +33,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Write the func`,
+        short_name: `chrisxu.wtf`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#ffffff`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/cx-icon.png`,
+        theme_color_in_head: false,
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-63591366-2",
+        trackingId: 'UA-63591366-2',
         head: false,
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
       },
     },
     {
@@ -56,5 +57,18 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
-  ]
+    {
+      resolve: 'gatsby-remark-prismjs',
+      options: {
+        inlineCodeMarker: '÷',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'chrisxu.wtf',
+        removeNonexistentObjects: true,
+      },
+    },
+  ],
 }

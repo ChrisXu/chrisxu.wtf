@@ -1,11 +1,11 @@
-import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import PropTypes from 'prop-types';
+import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
 
-import Header from './header';
-import Footer from './footer';
-import './config.scss';
-import '../styles/layout.scss';
+import Header from './header'
+import Footer from './footer'
+import './config.scss'
+import '../styles/layout.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -21,9 +21,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
         <Footer />
       </>
     )}
@@ -42,7 +40,7 @@ export default Layout
 //     const rootPath = `${__PATH_PREFIX__}/`;
 //     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
 //     const { children } = this.props;
-    
+
 //     return (
 //       <div>
 //         <Header siteTitle={siteTitle} />
