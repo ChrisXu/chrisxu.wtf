@@ -16,23 +16,11 @@ class AboutPage extends React.Component {
           <section>
             <p>Hi there,</p>
             <p>
-              I'm Chris Xu from Taiwan, currently enjoying cycling and exploring
-              cultural collision in Amsterdam.
+              How is your day? What kind of curiosity brings you here? Anyway, nice to meet you.
+              I'm Chris from Taiwan🇹🇼, living in Amsterdam, unavoidably being a cyclist for a few years. 
+              I build apps, teach people code, and read books. 
             </p>
-            <p>As a programmer, I have been building iOS apps for 7 years.</p>
-            <p>As a reader, I'm experimenting writing down the reading notes.</p>
-            <p>I'm also a foodie and a coffee enthusiant.</p>
           </section>
-          <Card
-            title="Chris Xu"
-            imageURL="https://i.pinimg.com/originals/b5/93/15/b5931516929acb4915e7e5362b563377.jpg"
-            description="This is the first card"
-          />
-          <Card
-            title="Second cat"
-            imageURL="https://www.quartoknows.com/blog/wp-content/uploads/2017/08/Bengal.png"
-            description="This is the second card"
-          />
         </main>
       </Layout>
     )
