@@ -1,7 +1,14 @@
 import Typography from 'typography'
-import githubTheme from 'typography-theme-github'
+import GitHub from 'typography-theme-github'
+import { auto } from 'eol';
 
-const typography = new Typography(githubTheme)
+GitHub.overrideStyles = () => ({
+  'body': {
+    margin: '0 auto',
+  }
+})
+
+const typography = new Typography(GitHub)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
