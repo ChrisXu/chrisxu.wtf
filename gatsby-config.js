@@ -52,12 +52,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    },
-    {
       resolve: 'gatsby-remark-prismjs',
       options: {
         inlineCodeMarker: '÷',
