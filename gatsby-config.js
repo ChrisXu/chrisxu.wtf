@@ -57,12 +57,5 @@ module.exports = {
         inlineCodeMarker: '÷',
       },
     },
-    {
-      resolve: `gatsby-plugin-s3`,
-      options: {
-        bucketName: 'chrisxu.wtf',
-        removeNonexistentObjects: true,
-      },
-    },
   ],
 }
