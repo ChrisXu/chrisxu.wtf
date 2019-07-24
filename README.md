@@ -23,7 +23,7 @@ Please do help me to correct my typos, code smell, and poor grammar. Feel free t
 
 ## Contact
 
-Follow me on Twitter [(@_ChrisXu)](https://twitter.com/_ChrisXu)
+Follow me on Twitter ([@_ChrisXu](https://twitter.com/_ChrisXu))
 
 ## License 
 

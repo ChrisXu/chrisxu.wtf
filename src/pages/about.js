@@ -1,12 +1,15 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 class AboutPage extends React.Component {
   render() {
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     return (
-      <Layout>
+      <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About" keywords={[`ios`, `mobile`, `engineering`]} />
         {/* <aside>
                 <Bio />
@@ -27,3 +30,14 @@ class AboutPage extends React.Component {
 }
 
 export default AboutPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }
+`

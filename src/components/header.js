@@ -6,12 +6,10 @@ const Header = ({ siteTitle, isRoot }) => (
   <header class="header">
     <div>
       <div class="header-title">
-        <Link
-          class="link"
+        <Link class="link"
           style={{
-            color: '#333',
-            textDecoration: 'none',
-            fontSize: isRoot ? '2.25rem' : '1.25rem',
+            color: 'orange',
+            fontSize: isRoot ? '2.25rem' : '1.75rem',
           }}
           to="/"
         >
