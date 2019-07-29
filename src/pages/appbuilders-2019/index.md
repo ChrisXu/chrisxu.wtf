@@ -71,7 +71,7 @@ A study shows [a human can only chunk into the brain with seven parts](https://e
 
 The second tip is to **identify the code smell at the right spectrum** when the codes become painfully to read and test. The speaker provides a useful chart to choose a strategy for dealing with the code correspondingly.
 
-The author of [**Swift In Depth**](https://www.manning.com/books/swift-in-depth), Tjeerd, recently wrote an article about [premature abstractions](https://swiftindepth.com/2019-03-24/a-case-of-premature-abstractions). In the article, he describes that abstracted code comes with a price. As a programmer, we have to be aware that the generalized code should be carefully taken into consideration. I firmly recommend you to read the article, and you will find his book very inspired and thoughtful as well.
+The author of [**Swift In Depth**](https://www.manning.com/books/swift-in-depth), Tjeerd, recently wrote an article about [premature abstractions](https://swiftindepth.com/2019-03-24/a-case-of-premature-abstractions). In the article, he described that the abstracted code comes with a price. As a programmer, we have to be aware that the generalized code should be carefully taken into consideration. I firmly recommend you to read the article, and you will find his book very inspired and thoughtful as well.
 
 > Duplication is far cheaper than the wrong abstraction. - Sandi Metz
 

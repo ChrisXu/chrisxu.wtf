@@ -1,7 +1,7 @@
 {
   "name": "chrisxu.wtf",
   "private": true,
-  "description": "Top secret",
+  "description": "Write The Funcs",
   "version": "0.1.0",
   "author": "Chris Xu <chrisxu@chrisxu.wtf>",
   "dependencies": {
@@ -40,7 +40,7 @@
     "clean": "gatsby clean",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,json,css}}'",
-    "deploy": "gatsby-plugin-s3 deploy"
+    "deploy": "firebase deploy"
   },
   "devDependencies": {
     "gh-pages": "^1.2.0",
