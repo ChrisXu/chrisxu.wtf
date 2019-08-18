@@ -764,6 +764,36 @@ pre tt:after {
   margin: 0 auto;
 }
 
+.feedback {
+  display: block;
+  margin: 0 auto;
+  padding: 1.45rem;
+  border-radius: 20px;
+  height: 280px;
+  background-color: $color-light-gray5;
+
+  h2 {
+    color: $color-light-dark-gray;
+  }
+
+  textarea {
+    width: 100%;
+    height: 80px;
+    padding: 0.7rem;
+    border: 0px;
+    border-radius: 8px;
+    resize: none; 
+    color: $color-light-dark-gray;
+    background-color: #ffffff;
+  }
+
+  textarea:focus { 
+    outline: none !important;
+    // border-color: #719ECE;
+    box-shadow: 0 0 6px $color-light-blue-hover;
+  }
+}
+
 .profile {
   float: right;
 }
