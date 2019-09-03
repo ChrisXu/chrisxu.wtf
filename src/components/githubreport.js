@@ -21,10 +21,11 @@ function GithubReport({ articleId }) {
       <h5>
         Any suggestion? 
         <Button href={issuesUrl} className={classes.textButton}>
-          Create issue
+          Issue
         </Button>
+        or
         <Button href={articleUrl} className={classes.textButton}>
-          Make PullRequest
+          PullRequest
         </Button></h5>
     </div>
   )
