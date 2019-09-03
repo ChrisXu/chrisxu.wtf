@@ -23,7 +23,6 @@ function GithubReport({ articleId }) {
         <Button href={issuesUrl} className={classes.textButton}>
           Create issue
         </Button>
-        or
         <Button href={articleUrl} className={classes.textButton}>
           Make PullRequest
         </Button></h5>
