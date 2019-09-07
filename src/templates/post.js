@@ -4,6 +4,8 @@ import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Feedback from '../components/feedback'
+import GithubReport from '../components/githubreport'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -23,6 +25,8 @@ class BlogPostTemplate extends React.Component {
           <h1>{post.frontmatter.title}</h1>
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <GithubReport articleId={this.props.location.pathname}/>
+        <Feedback/>
       </Layout>
     )
   }
