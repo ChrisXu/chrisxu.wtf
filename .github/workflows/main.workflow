@@ -23,6 +23,8 @@ action "Build" {
 action "Deploy" {
   uses = "natemoo-re/action-firebase@master"
   args = "deploy"
-  secrets = ["1/Nw5L3FSd-EPeyUb78TLH3e9NZvpTWYYCKGjX-h24ykU"]
+  secrets = [
+    "FIREBASE_CI",
+  ]
   needs = ["Build"]
 }
