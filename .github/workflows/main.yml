@@ -7,13 +7,15 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to firbase hosting
+    name: Deploy to production
     runs-on: macOS-10.14
     
     steps:
     - uses: actions/npm@master
+    - name: Clean install dependencies and build
       run: |
-        npm install
+        npm ci
         npm run build
     - uses: natemoo-re/action-firebase@master
-      runs: deploy --token ${{ secrets.FIREBASE_CI }}
+    - name: Deploy to firbase hosting
+      run: deploy --token ${{ secrets.FIREBASE_CI }}
