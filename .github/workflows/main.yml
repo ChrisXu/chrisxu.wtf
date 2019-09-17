@@ -15,7 +15,8 @@ jobs:
          node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout repo
+      uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -25,5 +26,7 @@ jobs:
         npm ci
         npm run build
     - name: Deploy to firbase hosting
+      env:
+        FIREBASE_CI_TOKEN: ${{ secrets.FIREBASE_CI }}
       uses: natemoo-re/action-firebase@master
-      run: deploy --token ${{ secrets.FIREBASE_CI }}
+      run: deploy --token $FIREBASE_CI_TOKEN
