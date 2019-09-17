@@ -29,4 +29,5 @@ jobs:
       env:
         FIREBASE_CI_TOKEN: ${{ secrets.FIREBASE_CI }}
       uses: natemoo-re/action-firebase@master
-      run: deploy --token $FIREBASE_CI_TOKEN
+      run: |
+        deploy --token $FIREBASE_CI_TOKEN
