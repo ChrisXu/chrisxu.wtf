@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    name: Deploy to firbase hosting
+    runs-on: macOS-10.14
+    
+    steps:
+    - uses: actions/npm@master
+      run: |
+        npm install
+        npm run build
+    - uses: natemoo-re/action-firebase@master
+      runs: deploy --token ${{ secrets.FIREBASE_CI }}
