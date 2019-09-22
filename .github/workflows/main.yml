@@ -28,6 +28,6 @@ jobs:
     - uses: natemoo-re/action-firebase@master
     - name: Deploy to firbase hosting
       env:
-        FIREBASE_CI_TOKEN: ${{ secrets.FIREBASE_CI }}
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_CI }}
       run: |
-        npm run deploy --token $FIREBASE_CI_TOKEN
+        npm run deploy --token "$FIREBASE_TOKEN"
