@@ -30,4 +30,4 @@ jobs:
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_CI }}
       run: |
-        npm run firebase deploy --token "$FIREBASE_TOKEN"
+        npm run deploy-ci "$FIREBASE_TOKEN"
