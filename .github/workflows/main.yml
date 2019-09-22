@@ -25,9 +25,9 @@ jobs:
       run: |
         npm ci
         npm run build
-    - uses: natemoo-re/action-firebase@master
     - name: Deploy to firbase hosting
+      uses: natemoo-re/action-firebase@master
       env:
         FIREBASE_CI_TOKEN: ${{ secrets.FIREBASE_CI }}
       run: |
-        npm deploy --token $FIREBASE_CI_TOKEN
+        deploy --token $FIREBASE_CI_TOKEN
