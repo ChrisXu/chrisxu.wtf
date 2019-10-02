@@ -26,6 +26,13 @@ module.exports = {
               maxWidth: 640,
             },
           },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              aliases:{sh: "bash", js:"javascript", md:"markdown"},
+              inlineCodeMarker: '>',
+            },
+          },
         ],
       },
     }, 
@@ -62,12 +69,6 @@ module.exports = {
         trackingId: 'UA-63591366-2',
         head: false,
         exclude: ['/preview/**', '/do-not-track/me/too/'],
-      },
-    },
-    {
-      resolve: 'gatsby-remark-prismjs',
-      options: {
-        inlineCodeMarker: '÷',
       },
     },
   ],

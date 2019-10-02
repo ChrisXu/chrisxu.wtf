@@ -28,6 +28,7 @@
     "gatsby-transformer-sharp": "^2.1.9",
     "lodash": "^4.17.15",
     "node-sass": "^4.11.0",
+    "prism-themes": "^1.2.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.7.2",
     "react": "^16.6.3",
