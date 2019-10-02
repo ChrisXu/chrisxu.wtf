@@ -1,7 +1,7 @@
 ---
 title: 'The discipline for the iOS project'
 date: '2019-10-02'
-brief: Three golden rules to keep your happy coding joureny
+brief: Three approaches to give back your happy coding joureny
 ---
 
 When was your last time getting a palm face while diving into an existing project? Have you ever wonder who on earth can ever add any features to it? You are not alone; we all have been to this moment, sooner or later.
