@@ -157,9 +157,7 @@ img {
 svg:not(:root) {
   overflow: hidden;
 }
-code,
 kbd,
-pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
@@ -643,34 +641,27 @@ td:last-child {
   padding-right: 0;
 }
 tt,
-code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
+code[class*='language-'],
+pre[class*='language-'] {
+  border-radius: 8px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-}
 
-pre code {
-  background: none;
-  line-height: 1.42;
-}
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  text-align: left;
 
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: ' ';
-}
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
 
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: '';
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 @media only screen and (max-width: 480px) {

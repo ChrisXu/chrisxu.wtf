@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Write The Funcs',
     author: 'Chris Xu',
-    description: 'A notdebook to obtain my personal opinions.',
+    description: 'A notdebook with my personal opinions.',
     siteUrl: 'https://chrisxu.wtf',
     social: {
       twitter: '@_chrisxu',
@@ -13,10 +13,29 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-material-ui`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 640,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              aliases:{sh: "bash", js:"javascript", md:"markdown"},
+              inlineCodeMarker: '>',
+            },
+          },
+        ],
+      },
+    }, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,12 +69,6 @@ module.exports = {
         trackingId: 'UA-63591366-2',
         head: false,
         exclude: ['/preview/**', '/do-not-track/me/too/'],
-      },
-    },
-    {
-      resolve: 'gatsby-remark-prismjs',
-      options: {
-        inlineCodeMarker: '÷',
       },
     },
   ],
