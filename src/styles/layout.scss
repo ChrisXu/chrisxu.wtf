@@ -80,10 +80,15 @@ figcaption,
 figure,
 main,
 menu,
-section,
 summary {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   display: block;
+}
+
+section {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: block;
+  margin-top: 1.15rem;
 }
 
 audio,
@@ -561,7 +566,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  
 }
 ol li {
   padding-left: 0;
