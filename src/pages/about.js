@@ -17,11 +17,11 @@ class AboutPage extends React.Component {
         <main>
           <section>
             <p>Hi there,</p>
-            <p>
-              How is your day? What kind of curiosity brings you here? Anyway, nice to meet you.
-              I'm Chris from Taiwan<span role="img" aria-label="taiwan">🇹🇼</span>, living in Amsterdam, unavoidably being a cyclist for a few years. 
-              I build apps, teach people code, and read books. 
-            </p>
+            <p>I'm Chris from Taiwan, a software engineer in Amsterdam. I make mobile applications and development tools for living. I also like to build teams and engineer culture for fun.</p>
+
+            <p>In the daytime, I enjoy reading books with classical music. At night, I turn into coding with electronic music. If you hear lo-fi music in my house, I am probably cooking.</p>
+
+            <p>Sometimes people find me boring because I tend to speak objectively, which is not easy to listen. I do have biases on many things, but I will try to eliminate those in my posts and talks. So please do feel free to hit me up, and also all kind of feedback is much appreciated.</p>
           </section>
         </main>
       </Layout>
