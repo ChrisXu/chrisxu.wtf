@@ -33,6 +33,11 @@ class AboutPage extends React.Component {
               <li>Dec 21 - Jan 11 @ Everywhere, TW</li>
             </ul>
           </section>
+          <hr></hr>
+          <section>
+            <h4>Talks</h4>
+            <p>Currently no public talks are scheduled, but I'm looking forward to having one.</p>
+          </section>
         </main>
       </Layout>
     )
