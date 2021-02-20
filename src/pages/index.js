@@ -14,7 +14,7 @@ class BlogIndexPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={siteTitle} keywords={[`ios`, `mobile`, `engineering`]} />
         <aside>
-          <Bio />
+          <Bio link="/about" hint="Learn more about me"/>
         </aside>
         <main>
           {posts.map(({ node }) => {
