@@ -20,7 +20,8 @@ jobs:
       
       - name: npm install, build
         run: |
-          yarn deploy-ci
+          yarn ci
+          yarn run build
       - name: Deploy to firbase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
