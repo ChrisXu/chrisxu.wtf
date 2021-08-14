@@ -1,3 +1,7 @@
+strategy:
+  matrix: 
+    node-version: [14.x]
+
 name: Deploy to Firebase Hosting on merge
 'on':
   push:
