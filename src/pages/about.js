@@ -18,26 +18,13 @@ class AboutPage extends React.Component {
         <main>
           <section>
             <h4>Hi there,</h4>
-            <p>I'm Chris from Taiwan<span role="img" aria-label="taiwan">🇹🇼</span>, a software engineer and Swift bartender in Amsterdam. I make mobile applications and development tools for living. I also like to build teams and engineer culture for fun.</p>
+            <p>I'm Chris from Taiwan<span role="img" aria-label="taiwan">🇹🇼</span>, a software engineer and Swift bartender in Amsterdam. I have been building beautiful iOS apps for almost a decade. I am also passionate about helping other engineers and shaping a healthier engineering culture.</p>
 
-            <p>In the daytime, I enjoy reading books with classical music. At night, I turn into coding with electronic music. If you hear lo-fi music in my house, I am probably cooking.</p>
+            <p>I code in Swift by day, Python by night, and JS on weekends.</p>
 
-            <p>Sometimes people find me boring because I tend to speak objectively, which is too plain to understand. I do have biases on many things, but I try to eliminate those in my posts and talks. So please do feel free to hit me up, and also all kind of feedback is much appreciated.</p>
+            <p>I like reading books. <a href="https://bit.ly/chrisxu-booklist">Here is my booklist</a></p>
           </section>
           <hr></hr>
-          <section>
-            <h4>Upcoming show-up</h4>
-            <ul>
-              <li>Nov 15 - Nov 17 @ Glasgow, UK</li>
-              <li>Dec 19 - Dev 20 @ Tokyo, JP</li>
-              <li>Dec 21 - Jan 11 @ Everywhere, TW</li>
-            </ul>
-          </section>
-          <hr></hr>
-          <section>
-            <h4>Talks</h4>
-            <p>Currently no public talks are scheduled, but I'm looking forward to having one.</p>
-          </section>
         </main>
       </Layout>
     )

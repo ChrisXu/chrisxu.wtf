@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Write The Funcs',
     author: 'Chris Xu',
-    description: 'A notdebook with my personal opinions.',
+    description: 'A notebook with my personal opinions.',
     siteUrl: 'https://chrisxu.wtf',
     social: {
       twitter: '@_chrisxu',
