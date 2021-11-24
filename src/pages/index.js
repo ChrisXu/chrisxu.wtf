@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Bio from '../components/bio'
+import Banner from '../components/banner'
 
 class BlogIndexPage extends React.Component {
   render() {
@@ -42,6 +43,9 @@ class BlogIndexPage extends React.Component {
             )
           })}
         </main>
+        <aside>
+          <Banner title="Available for new challenge" link="/freelancing"/>
+        </aside>
       </Layout>
     )
   }
